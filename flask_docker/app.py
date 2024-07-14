@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 #load model once used by all predicition calls
 import joblib
-clf = joblib.load('binary_clf.joblib')
+clf_lda = joblib.load('binary_clf.joblib')
 
 @app.route('/')
 def homer():
@@ -14,7 +14,7 @@ def homer():
 def converter_with_type(input_data):
     # make train data look alike predict data
     pred_data = [[input_data]]
-    predict_result = clf.predict(pred_data)
+    predict_result = clf_lda.predict(pred_data)
     return ("Prediction result: " + str(predict_result))
 
 if __name__ == "__main__":

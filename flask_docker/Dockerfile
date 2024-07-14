@@ -1,4 +1,4 @@
-#refered  based image from htt[s://hub.docker.com/_/python
+#refered  based image from https://hub.docker.com/_/python
 FROM python:3.11-slim-bullseye
 
 #copy current directory into docker container
